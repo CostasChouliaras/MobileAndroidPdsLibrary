@@ -11,6 +11,7 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
 import com.educationperfect.androidpdslibrary.ui.theme.AndroidPdsLibraryTheme
+import com.educationperfect.pds_library.ACustomComposable
 
 
 class MainActivity : ComponentActivity() {
@@ -24,7 +25,7 @@ class MainActivity : ComponentActivity() {
                     color = MaterialTheme.colors.background
                 ) {
                     Greeting("Android")
-
+                    ACustomComposable()
                 }
             }
         }
