@@ -31,6 +31,9 @@ android {
     }
     kotlinOptions {
         jvmTarget = '1.8'
+        useIR = true
+        allWarningsAsErrors = false
+        freeCompilerArgs += "-Xopt-in=kotlin.RequiresOptIn"
     }
     buildFeatures {
         compose true
@@ -59,5 +62,11 @@ dependencies {
     androidTestImplementation "androidx.compose.ui:ui-test-junit4:$compose_version"
     debugImplementation "androidx.compose.ui:ui-tooling:$compose_version"
 
-    implementation 'com.github.CostasChouliaras:AndroidPdsLibrary:6.0'
+    implementation 'androidx.compose.material:material-icons-extended:1.1.0-rc01'
+    implementation 'androidx.compose.material:material:1.0.5'
+    implementation  "androidx.compose.material:material-icons-extended:1.1.0-rc01"
+
+    implementation project(':pds-library')
+    //implementation 'com.github.CostasChouliaras:AndroidPdsLibrary:18.0'
+
 }
