@@ -1,4 +1,4 @@
-import com.educationperfect.teacher.buildsrc.Libs
+import com.educationperfect.androidpdslibrary.buildsrc.Libs
 
 plugins {
     id 'com.android.application'
