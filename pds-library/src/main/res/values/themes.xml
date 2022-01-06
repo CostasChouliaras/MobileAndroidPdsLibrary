@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <!-- Base application theme. -->
-    <style name="Theme.JetTeacherMobile" parent="Theme.MaterialComponents.Light.NoActionBar">
+    <style name="Theme.JetTeacherMobile" parent="">
         <item name="android:statusBarColor">@android:color/transparent</item>
         <item name="android:navigationBarColor">@android:color/transparent</item>
-        <item name="android:windowBackground">?attr/colorSurface</item>
+        <item name="android:windowBackground"></item>
     </style>
 </resources>
