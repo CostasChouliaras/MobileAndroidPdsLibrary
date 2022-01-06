@@ -68,7 +68,6 @@ android {
 
 dependencies {
 
-    implementation "androidx.ui:ui-tooling:$compose_version"
     implementation "androidx.compose.runtime:runtime:$compose_version"
     implementation "androidx.compose.compiler:compiler:$compose_version"
 
