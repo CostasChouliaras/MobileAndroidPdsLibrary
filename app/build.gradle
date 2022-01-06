@@ -57,7 +57,6 @@ android {
     }
     composeOptions {
         kotlinCompilerVersion '1.5.30'
-        kotlinCompilerExtensionVersion '1.5.30'
     }
 
     packagingOptions {
@@ -68,6 +67,10 @@ android {
 }
 
 dependencies {
+
+    implementation "androidx.ui:ui-tooling:$compose_version"
+    implementation "androidx.compose.runtime:runtime:$compose_version"
+    implementation "androidx.compose.compiler:compiler:$compose_version"
 
     kapt Libs.AndroidX.Room.roomCompiler
     kapt Libs.Hilt.hiltKapt
