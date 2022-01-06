@@ -56,8 +56,8 @@ android {
         shaders false
     }
     composeOptions {
-        kotlinCompilerVersion '1.5.30'
-        kotlinCompilerExtensionVersion '1.5.30'
+        kotlinCompilerVersion Libs.Kotlin.version
+        kotlinCompilerExtensionVersion Libs.AndroidX.Compose.version
     }
 
     packagingOptions {
