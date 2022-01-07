@@ -155,6 +155,6 @@ dependencies {
     implementation  "androidx.compose.material:material-icons-extended:1.1.0-rc01"
 
     //implementation project(':pds-library')
-    implementation 'com.github.CostasChouliaras:AndroidPdsLibrary:11'
+    implementation 'com.github.CostasChouliaras:MobileAndroidPdsLibrary:15'
 
 }
