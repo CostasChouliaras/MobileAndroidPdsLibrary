@@ -24,7 +24,7 @@ class MainActivity : ComponentActivity() {
                     modifier = Modifier.fillMaxSize(),
                     color = MaterialTheme.colors.background
                 ) {
-                    EpActivityButton(text = "smth", onCLick = { /*TODO*/ }, modifier =  Modifier.fillMaxSize())
+                    EpActivityButton(text = "Click!", onCLick = { /*TODO*/ }, modifier =  Modifier.fillMaxSize())
                 }
             }
         }
