@@ -52,7 +52,7 @@ afterEvaluate {
 
                 groupId 'com.github.CostasChouliaras'
                 artifactId 'mobile-android-pds-library'
-                version '1.0'
+                version '18'
             }
         }
     }
