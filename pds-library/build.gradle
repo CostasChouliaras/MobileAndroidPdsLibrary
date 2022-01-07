@@ -45,14 +45,15 @@ dependencies {
 }
 
 afterEvaluate {
-    publishing{
-        publications{
+    publishing {
+        publications {
             release(MavenPublication) {
                 from components.release
 
+
                 groupId 'com.github.CostasChouliaras'
                 artifactId 'mobile-android-pds-library'
-                version '1.0'
+                version '12.0'
             }
         }
     }
