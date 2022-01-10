@@ -157,5 +157,4 @@ dependencies {
     implementation project(':pds-library')
     //implementation 'com.github.CostasChouliaras:MobileAndroidPdsLibrary:20.0'
 
-
 }
