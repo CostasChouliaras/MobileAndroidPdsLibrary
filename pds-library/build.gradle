@@ -1,8 +1,8 @@
 import com.educationperfect.pds_library.buildsrc.Libs
 
 plugins {
-    id 'org.jetbrains.kotlin.android'
     id 'com.android.library'
+    id 'org.jetbrains.kotlin.android'
     id 'maven-publish'
 }
 
@@ -54,7 +54,7 @@ afterEvaluate {
 
                 groupId = 'com.github.CostasChouliaras'
                 artifactId = 'mobile-android-pds-library'
-                version = '1.2'
+                version = '20.0'
             }
         }
     }
