@@ -1,8 +1,8 @@
 import com.educationperfect.pds_library.buildsrc.Libs
 
 plugins {
-    id 'com.android.library'
     id 'org.jetbrains.kotlin.android'
+    id 'com.android.library'
     id 'maven-publish'
 }
 
@@ -47,12 +47,14 @@ dependencies {
 afterEvaluate {
     publishing{
         publications{
+            //Creates a Maven publication called "release"
             release(MavenPublication) {
+                //Applies the component for the release build variant
                 from components.release
 
-                groupId 'com.github.CostasChouliaras'
-                artifactId 'mobile-android-pds-library'
-                version '19'
+                groupId = 'com.github.CostasChouliaras'
+                artifactId = 'mobile-android-pds-library'
+                version = '19'
             }
         }
     }
