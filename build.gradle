@@ -7,7 +7,7 @@ buildscript {
     repositories {
         google()
         mavenCentral()
-        maven { url 'https://jitpack.io' }
+
 
         if (Libs.AndroidX.Compose.version.endsWith('SNAPSHOT')) {
             maven { url Libs.AndroidX.Compose.snapshotUrl }
