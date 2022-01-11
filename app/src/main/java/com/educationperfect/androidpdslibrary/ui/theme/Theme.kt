@@ -5,6 +5,8 @@ import androidx.compose.material.MaterialTheme
 import androidx.compose.material.darkColors
 import androidx.compose.material.lightColors
 import androidx.compose.runtime.Composable
+import com.educationperfect.pds_library.ui.EdsTypography
+import com.educationperfect.pds_library.ui.Shapes
 
 private val DarkColorPalette = darkColors(
     primary = Purple200,
@@ -28,19 +30,19 @@ private val LightColorPalette = lightColors(
 )
 
 @Composable
-fun AndroidPdsLibraryTheme(
+fun PdsLibraryTheme(
     darkTheme: Boolean = isSystemInDarkTheme(),
-    content: @Composable () -> Unit
+    content: @Composable() () -> Unit
 ) {
     val colors = if (darkTheme) {
-        DarkColorPalette
+        com.educationperfect.pds_library.ui.DarkColorPalette
     } else {
-        LightColorPalette
+        com.educationperfect.pds_library.ui.LightColorPalette
     }
 
     MaterialTheme(
         colors = colors,
-        typography = Typography,
+        typography = EdsTypography,
         shapes = Shapes,
         content = content
     )

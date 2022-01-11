@@ -7,25 +7,26 @@ import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.material.MaterialTheme
 import androidx.compose.material.Surface
 import androidx.compose.material.Text
+import androidx.compose.material.TextField
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
-import com.educationperfect.androidpdslibrary.ui.theme.AndroidPdsLibraryTheme
 import com.educationperfect.pds_library.components.EpActivityButton
+import com.educationperfect.pds_library.ui.PdsLibraryTheme
 
 
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContent {
-            AndroidPdsLibraryTheme {
+            PdsLibraryTheme {
                 // A surface container using the 'background' color from the theme
                 Surface(
                     modifier = Modifier.fillMaxSize(),
-                    color = MaterialTheme.colors.background
+                    color = MaterialTheme.colors.onSurface
                 ) {
-
-                    EpActivityButton(text = "Click!", onCLick = { /*TODO*/ }, modifier =  Modifier.fillMaxSize())
+                    Text(text = "test", style = MaterialTheme.typography.h1)
+                    //EpActivityButton(text = "Click!", onCLick = { /*TODO*/ }, modifier =  Modifier.fillMaxSize())
                 }
             }
         }
@@ -40,7 +41,7 @@ fun Greeting(name: String) {
 @Preview(showBackground = true)
 @Composable
 fun DefaultPreview() {
-    AndroidPdsLibraryTheme {
+    PdsLibraryTheme() {
         Greeting("Android")
     }
 }
