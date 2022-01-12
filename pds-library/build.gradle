@@ -2,7 +2,11 @@ import com.educationperfect.pds_library.buildsrc.Libs
 
 plugins {
     id 'com.android.library'
-    id 'org.jetbrains.kotlin.android'
+    id 'kotlin-android'
+    id 'kotlin-parcelize'
+    id 'kotlin-kapt'
+    id 'dagger.hilt.android.plugin'
+
     id 'maven-publish'
 }
 
@@ -40,8 +44,78 @@ android {
 }
 
 dependencies {
-    implementation "androidx.compose.ui:ui:$compose_version"
-    implementation "androidx.compose.material:material:$compose_version"
+    implementation "androidx.compose.ui:ui:1.0.5"
+    implementation "androidx.compose.material:material:1.0.5"
+
+
+    kapt Libs.AndroidX.Room.roomCompiler
+    kapt Libs.Hilt.hiltKapt
+    kapt "org.xerial:sqlite-jdbc:3.34.0"
+
+    testImplementation("junit:junit:4.13")
+    testImplementation('androidx.test:core:1.4.0')
+    testImplementation ('com.google.truth:truth:1.0.1')
+    androidTestImplementation ('com.google.truth:truth:1.0.1')
+
+    implementation Libs.Kotlin.stdlib
+    implementation Libs.Coroutines.android
+    implementation Libs.RxKotlin.rxKotlin
+
+    implementation Libs.AndroidX.coreKtx
+    implementation Libs.AndroidX.appcompat
+    implementation Libs.AndroidX.Navigation.fragment
+    implementation Libs.AndroidX.Navigation.uiKtx
+    implementation Libs.AndroidX.Material.material
+
+    implementation Libs.AndroidX.Compose.ui
+    implementation Libs.AndroidX.Compose.layout
+    implementation Libs.AndroidX.Compose.foundation
+    implementation Libs.AndroidX.Compose.material
+    implementation Libs.AndroidX.Compose.materialIconsExtended
+    implementation Libs.AndroidX.Compose.tooling
+    implementation Libs.AndroidX.Compose.runtime
+    implementation Libs.AndroidX.Compose.runtimeLivedata
+    implementation Libs.AndroidX.Compose.composeNavigation
+    implementation Libs.AndroidX.Compose.animation
+    implementation Libs.AndroidX.Compose.navHilt
+    implementation Libs.AndroidX.Compose.viewmodel
+
+    implementation Libs.AndroidX.Lifecycle.runtime
+    implementation Libs.AndroidX.Lifecycle.livedata
+    implementation Libs.AndroidX.Lifecycle.viewmodel
+
+    implementation Libs.AndroidX.Networking.gson
+    implementation Libs.AndroidX.Networking.retrofit
+    implementation Libs.AndroidX.Networking.converterGson
+    implementation Libs.AndroidX.Networking.okhttp
+    implementation Libs.AndroidX.Networking.loggingInterceptor
+    implementation Libs.AndroidX.Timber.timber
+
+    implementation Libs.AndroidX.Room.roomRuntime
+    implementation Libs.AndroidX.Room.roomKtx
+    implementation Libs.AndroidX.Datastore.datastore
+
+    implementation Libs.Accompanist.insets
+    implementation Libs.Accompanist.uicontroller
+    implementation Libs.Coil.coilCompose
+    implementation Libs.MixPanel.mixPanel
+
+    implementation Libs.Hilt.hilt
+
+    androidTestImplementation Libs.junit
+    androidTestImplementation Libs.AndroidX.Test.core
+    androidTestImplementation Libs.AndroidX.Test.espressoCore
+    androidTestImplementation Libs.AndroidX.Test.rules
+    androidTestImplementation Libs.AndroidX.Test.Ext.junit
+    androidTestImplementation Libs.AndroidX.Compose.uiTest
+
+    androidTestImplementation("androidx.compose.ui:ui-test-junit4:1.0.0")
+    debugImplementation("androidx.compose.ui:ui-test-manifest:1.0.0")
+
+    // For instrumented tests.
+    androidTestImplementation Libs.Hilt.hiltTest
+    // ...with Kotlin.
+    kaptAndroidTest("com.google.dagger:hilt-android-compiler:2.38.1")
 }
 
 afterEvaluate {

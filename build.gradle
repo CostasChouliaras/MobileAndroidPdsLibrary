@@ -1,9 +1,6 @@
 import com.educationperfect.pds_library.buildsrc.Libs
 
 buildscript {
-    ext {
-        compose_version = '1.0.3'
-    }
     repositories {
         google()
         mavenCentral()
