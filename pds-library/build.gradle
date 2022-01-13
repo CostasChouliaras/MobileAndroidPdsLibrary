@@ -40,11 +40,50 @@ android {
 }
 
 dependencies {
-    implementation "androidx.compose.ui:ui:$compose_version"
-    implementation "androidx.compose.material:material:$compose_version"
 
+    implementation Libs.Kotlin.stdlib
+    implementation Libs.Coroutines.android
+    implementation Libs.RxKotlin.rxKotlin
+
+    implementation Libs.AndroidX.coreKtx
+    implementation Libs.AndroidX.appcompat
+
+    implementation Libs.AndroidX.Material.material
+
+    implementation Libs.AndroidX.Compose.ui
+    implementation Libs.AndroidX.Compose.layout
+    implementation Libs.AndroidX.Compose.foundation
     implementation Libs.AndroidX.Compose.material
     implementation Libs.AndroidX.Compose.materialIconsExtended
+    implementation Libs.AndroidX.Compose.tooling
+    implementation Libs.AndroidX.Compose.runtime
+    implementation Libs.AndroidX.Compose.runtimeLivedata
+    implementation Libs.AndroidX.Compose.animation
+    implementation Libs.AndroidX.Compose.navHilt
+    implementation Libs.AndroidX.Compose.viewmodel
+
+    implementation Libs.AndroidX.Lifecycle.runtime
+    implementation Libs.AndroidX.Lifecycle.livedata
+    implementation Libs.AndroidX.Lifecycle.viewmodel
+
+
+
+    implementation Libs.Accompanist.insets
+    implementation Libs.Accompanist.uicontroller
+    implementation Libs.Coil.coilCompose
+
+    implementation Libs.Hilt.hilt
+
+    debugImplementation("androidx.compose.ui:ui-test-manifest:1.0.0")
+
+    implementation 'androidx.core:core-ktx:1.7.0'
+    implementation "androidx.compose.ui:ui:$compose_version"
+    implementation "androidx.compose.material:material:$compose_version"
+    implementation "androidx.compose.ui:ui-tooling-preview:$compose_version"
+    implementation 'androidx.lifecycle:lifecycle-runtime-ktx:2.3.1'
+    implementation 'androidx.activity:activity-compose:1.4.0'
+
+    debugImplementation "androidx.compose.ui:ui-tooling:$compose_version"
 }
 
 afterEvaluate {
