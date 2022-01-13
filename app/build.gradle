@@ -69,6 +69,7 @@ android {
 
 dependencies {
 
+    kapt Libs.AndroidX.Room.roomCompiler
     kapt Libs.Hilt.hiltKapt
     kapt "org.xerial:sqlite-jdbc:3.34.0"
 
