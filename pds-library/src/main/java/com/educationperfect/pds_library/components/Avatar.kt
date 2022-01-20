@@ -1,4 +1,4 @@
-package com.educationperfect.teacher.compose.composables.components
+package com.educationperfect.pds_library.components
 
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.*
@@ -14,10 +14,9 @@ import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.graphics.graphicsLayer
 import androidx.compose.ui.text.TextStyle
 import androidx.compose.ui.text.style.TextAlign
-import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.Dp
 import androidx.compose.ui.unit.dp
-import com.educationperfect.teacher.ui.*
+import com.educationperfect.pds_library.ui.*
 
 /**
  * Created by george on 16/08/2021
@@ -101,9 +100,3 @@ private fun AvatarBadge(
     }
 }
 
-
-@Preview(showBackground = false)
-@Composable
-fun AvatarPreview() {
-    Avatar(initials = "MK", isOnline = true)
-}
