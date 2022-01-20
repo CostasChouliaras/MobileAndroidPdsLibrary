@@ -1,10 +1,8 @@
-package com.educationperfect.pds_library.components
+package com.educationperfect.teacher.compose.composables.components
 
 import androidx.compose.foundation.background
-import androidx.compose.foundation.layout.Box
-import androidx.compose.foundation.layout.height
-import androidx.compose.foundation.layout.padding
-import androidx.compose.foundation.layout.width
+import androidx.compose.foundation.layout.*
+import androidx.compose.foundation.shape.CircleShape
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material.MaterialTheme
 import androidx.compose.material.Text
@@ -16,9 +14,10 @@ import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.graphics.graphicsLayer
 import androidx.compose.ui.text.TextStyle
 import androidx.compose.ui.text.style.TextAlign
+import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.Dp
 import androidx.compose.ui.unit.dp
-import com.educationperfect.pds_library.ui.AvatarDefault
+import com.educationperfect.teacher.ui.*
 
 /**
  * Created by george on 16/08/2021
@@ -32,11 +31,54 @@ enum class EdsAvatarType(val radius: Dp, val padding: Dp) {
 @Composable
 fun Avatar(
     initials: String,
+    isOnline: Boolean = false,
     type: EdsAvatarType = EdsAvatarType.Basic,
     style: TextStyle = MaterialTheme.typography.h2,
     backgroundColor: Color = AvatarDefault,
     width: Dp = 28.dp,
     height: Dp = 28.dp
+) {
+    Box(
+        modifier = Modifier
+            .width(width)
+            .height(height),
+        contentAlignment = Alignment.BottomEnd
+    ) {
+        AvatarBadge(
+            initials = initials,
+            type = type,
+            style = style,
+            backgroundColor = backgroundColor,
+            width = width,
+            height = height
+        )
+        if (isOnline) {
+            Box(
+                modifier = Modifier
+                    .clip(CircleShape)
+                    .background(Color.White)
+                    .size(width.times(0.25f)),
+                contentAlignment = Alignment.Center
+            ) {
+                Box(
+                    modifier = Modifier
+                        .clip(CircleShape)
+                        .background(Green500)
+                        .size(width.times(0.17f))
+                )
+            }
+        }
+    }
+}
+
+@Composable
+private fun AvatarBadge(
+    initials: String,
+    type: EdsAvatarType,
+    style: TextStyle,
+    backgroundColor: Color,
+    width: Dp,
+    height: Dp
 ) {
     Box(
         modifier = Modifier
@@ -59,3 +101,9 @@ fun Avatar(
     }
 }
 
+
+@Preview(showBackground = false)
+@Composable
+fun AvatarPreview() {
+    Avatar(initials = "MK", isOnline = true)
+}
