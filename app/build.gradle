@@ -1,4 +1,4 @@
-import com.educationperfect.androidpdslibrary.buildsrc.Libs
+import com.educationperfect.pds_library.buildsrc.Libs
 
 plugins {
     id 'com.android.application'
@@ -56,8 +56,8 @@ android {
         shaders false
     }
     composeOptions {
-        kotlinCompilerVersion '1.5.30'
-        kotlinCompilerExtensionVersion '1.5.30'
+        kotlinCompilerVersion Libs.Kotlin.version
+        kotlinCompilerExtensionVersion Libs.AndroidX.Compose.version
     }
 
     packagingOptions {
@@ -155,6 +155,6 @@ dependencies {
     implementation  "androidx.compose.material:material-icons-extended:1.1.0-rc01"
 
     implementation project(':pds-library')
-//implementation 'com.github.CostasChouliaras:AndroidPdsLibrary:18.0'
+    //implementation 'com.github.CostasChouliaras:MobileAndroidPdsLibrary:15'
 
 }

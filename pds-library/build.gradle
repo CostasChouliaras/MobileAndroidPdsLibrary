@@ -1,3 +1,4 @@
+import com.educationperfect.pds_library.buildsrc.Libs
 
 plugins {
     id 'com.android.library'
@@ -33,8 +34,8 @@ android {
         compose true
     }
     composeOptions {
-        kotlinCompilerExtensionVersion compose_version
-        kotlinCompilerVersion '1.5.30'
+        kotlinCompilerVersion Libs.Kotlin.version
+        kotlinCompilerExtensionVersion Libs.AndroidX.Compose.version
     }
 }
 
