@@ -23,7 +23,6 @@ enum class EdsTagType(val textColor: Color, val backgroundColor: Color) {
     Alert(Red500, Red300)
 }
 
-
 /**
  * EP EDS tag composable.
  *

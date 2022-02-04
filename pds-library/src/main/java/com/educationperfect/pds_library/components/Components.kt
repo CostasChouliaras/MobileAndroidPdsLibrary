@@ -141,7 +141,6 @@ fun EpIconActionListItem(
     }
 }
 
-
 /**
  * EP EDS EP Clickable text
  *
@@ -228,7 +227,6 @@ fun EpBottomBarWithActionButton(
         )
     }
 }
-
 
 /**
  * EP EDS EP profile header

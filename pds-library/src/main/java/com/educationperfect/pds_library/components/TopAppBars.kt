@@ -133,8 +133,6 @@ sealed class NavigationAction(val visible: Boolean = true, val identifier: Strin
     ) : NavigationAction(visible = isVisible, identifier = testId)
 }
 
-
-
 /**
  * EP EDS top app bar title
  *
@@ -170,8 +168,6 @@ private fun TopAppBarTitle(
             .alpha(alpha)
     )
 }
-
-
 
 /**
  * EP EDS EP top app bar
@@ -411,8 +407,6 @@ private fun TopAppBarAction(
     }
 }
 
-
-
 /**
  * EP EDS EP top app bar with search
  *
@@ -569,7 +563,6 @@ fun EpTopAppBarWithSearch(
     }
 }
 
-
 /**
  * EP EDS Seach bar
  *
@@ -619,21 +612,14 @@ private fun SearchBar(
     )
 }
 
-
 /**
- * EP EDS EP Alert dialog
+ * EP EDS SearchNavigationIcon
  *
- * @param openDialog Defines if the dialog will open
- * @param closeDialog Executes when the user tries to dismiss the Dialog by clicking outside or pressing the back button.
- * This is not called when the dismiss button is clicked.
- * @param title Text to be displayed as the title of the Dialog.
- * @param description Text to be displayed as the description of the Dialog
- * @param textAlign The alignment of the text within the lines of the paragraph. See [TextStyle.textAlign].
- * @param confirmText Text to be displayed on the confirm choice.
- * @param confirmAction The callback to be invoked when this confirmationAction is clicked.
- * @param withDismiss Defines if the dialog will have a dismiss text button.
- * @param dismissText Text to be displayed upon tapping the dismiss choice.
- *
+ * @param isSearching Defines if the icon will change to searching mode.
+ * @param withNavigationIcon Defines if a navigation icon will be present.
+ * @param icon Defines the icon that will be used.
+ * @param onStateChange The callback to be invoked when the state of the composable change.
+ * @param action The callback to be invoked when this composable will be tapped.
  */
 
 @OptIn(ExperimentalComposeUiApi::class)

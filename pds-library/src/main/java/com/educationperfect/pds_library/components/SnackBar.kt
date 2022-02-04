@@ -34,7 +34,6 @@ enum class EdsSnackBarType(val textColor: Color, val backgroundColor: Color, val
     Passive(Color.White, Neutral900, Icons.Outlined.Info)
 }
 
-
 /**
  * EP EDS Snack bar composable.
  *
