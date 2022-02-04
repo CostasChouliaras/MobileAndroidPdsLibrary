@@ -14,10 +14,8 @@ import com.educationperfect.pds_library.ui.Neutral1000
  * Created by George Sylaios on 2/6/21.
  */
 
-
-
 /**
- * EP EDS EP Alert dialog
+ * EP EDS EpAlertDialog
  *
  * @param openDialog Defines if the dialog will open
  * @param closeDialog Executes when the user tries to dismiss the Dialog by clicking outside or pressing the back button.
@@ -97,10 +95,8 @@ fun EpAlertDialog(
     }
 }
 
-
-
 /**
- * EP EDS EP Custom dialog
+ * EP EDS EpCustomDialog
  *
  * @param openDialog Defines if the dialog will open
  * @param closeDialog Executes when the user tries to dismiss the Dialog by clicking outside or pressing the back button.
@@ -116,9 +112,7 @@ fun EpAlertDialog(
  * @param confirmButtonTag Tag / ID which is used to locate dialog's confirmation text button (used for tests).
  * @param dismissButtonTag Tag / ID which is used to locate dialog's dismiss text button (used for tests).
  * @param epCustomDialogTag Tag / ID which is used to locate dialog's dismiss icon (used for tests).
- *
  */
-
 @Composable
 private fun EPCustomDialog(
     openDialog: Boolean,

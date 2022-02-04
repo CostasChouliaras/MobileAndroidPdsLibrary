@@ -31,12 +31,12 @@ import com.educationperfect.pds_library.ui.Red500
  */
 
 /**
- * EP EDS outlined text field with fixed label.
+ * EP EDS OutlinedTextFieldWithFixedLabel
  *
  * Outlined text fields have less visual emphasis than filled text fields. When they appear in places like forms,
  * where many text fields are placed together, their reduced emphasis helps simplify the layout.
  *
- * @param value  the input text to be shown in the text field.
+ * @param value the input text to be shown in the text field.
  * @param onTextChanged the callback that is triggered when the input service updates the text. An updated text comes as a parameter of the callback.
  * @param enabled controls the enabled state of the outlined text field. When false, the text field will be neither editable nor focusable, the input of the text field will not be selectable, visually text field will appear in the disabled UI state.
  * @param readOnly controls the editable state of the outlined text field. When true, the text field can not be modified, however, a user can focus it and copy text from it. Read-only text fields are usually used to display pre-filled forms that user can not edit.
@@ -166,7 +166,7 @@ fun OutlinedTextFieldWithFixedLabel(
 }
 
 /**
- * EP EDS plain text field with fixed label.
+ * EP EDS PlainTextFieldWithFixedLabel
  *
  * @param value the input text to be shown in the text field.
  * @param onTextChanged the callback that is triggered when the input service updates the text. An updated text comes as a parameter of the callback.
