@@ -19,8 +19,8 @@ import com.educationperfect.pds_library.ui.Neutral700
  */
 
 /**
- * EP EDS EpTabRow composable.
-
+ * EP EDS EpTabRow
+ *
  * @param items the given list items will be added as tabs.
  * @param tabIndex the index of the currently selected tab.
  * @param backgroundColor The background color for the TabRow. Use [Color.Transparent] to have no color.
@@ -72,7 +72,7 @@ fun EpTabRow(
 }
 
 /**
- * EP EDS EpTabRow composable.
+ * EP EDS EpTabItem
  *
  * @param selected whether this tab is selected or not
  * @param text the text label displayed in this tab

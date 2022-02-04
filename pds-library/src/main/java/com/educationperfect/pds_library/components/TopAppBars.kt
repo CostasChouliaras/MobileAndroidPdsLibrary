@@ -134,7 +134,7 @@ sealed class NavigationAction(val visible: Boolean = true, val identifier: Strin
 }
 
 /**
- * EP EDS top app bar title
+ * EP EDS TopAppBarTitle
  *
  * @param text The input text to be shown in the title of top the app bar.
  * @param width The given Dp value will be set as the width of the top app bar.
@@ -144,7 +144,6 @@ sealed class NavigationAction(val visible: Boolean = true, val identifier: Strin
  * @param maxLines An optional maximum number of lines for the text to span, wrapping if necessary.
  * If the text exceeds the given number of lines, it will be truncated according to overflow and softWrap. If it is not null, then it must be greater than zero.
  * @param modifier [Modifier] to apply to this layout node.
- *
  */
 @Composable
 private fun TopAppBarTitle(
@@ -170,7 +169,7 @@ private fun TopAppBarTitle(
 }
 
 /**
- * EP EDS EP top app bar
+ * EP EDS EpTopAppBar
  *
  * @param title The input text will be shown in the [title] of top the app bar.
  * @param titleColor The given color value will be set as the color for the [title] of the top app bar.
@@ -184,7 +183,6 @@ private fun TopAppBarTitle(
  * @param elevation The elevation of this TopAppBar.
  * @param withBottomDivider Defines if the top app bar will have a bottom divider.
  * @param backgroundColor The background color for the TopAppBar. Use Color.Transparent to have no color.
- *
  */
 @Composable
 fun EpTopAppBar(
@@ -245,7 +243,7 @@ fun EpTopAppBar(
 }
 
 /**
- * EP EDS top app bar navigation icon.
+ * EP EDS TopAppBarNavigationIcon
  * @param navIcon [ImageVector] to draw inside this Icon.
  */
 @Composable
@@ -262,7 +260,7 @@ private fun TopAppBarNavigationIcon(navIcon: NavigationIcon) {
 }
 
 /**
- * EP EDS top app bar actions
+ * EP EDS TopAppBarActions
  *
  * @param state Defines the state of the action bar.
  * @param actions The actions displayed at the end of the [TopAppBar]. This should typically be [IconButtons].
@@ -271,7 +269,6 @@ private fun TopAppBarNavigationIcon(navIcon: NavigationIcon) {
  * The default layout here is a Row, so icons inside will be placed horizontally.
  *
  */
-
 @Composable
 private fun TopAppBarActions(
     state: ActionState,
@@ -283,16 +280,14 @@ private fun TopAppBarActions(
     }
 }
 
-
 /**
- * EP EDS top app bar action
+ * EP EDS TopAppBarAction
  *
  * @param state Defines the state of the action bar.
  * @param actionSize actionSize The actions displayed at the end of the TopAppBar. This should typically be IconButtons.
  * The default layout here is a Row, so icons inside will be placed horizontally.
  * @param navigationAction Receives a navigation action.
  * @param textButtonColors Text to be displayed as the description of the Dialog.
- *
  */
 
 @Composable
@@ -408,7 +403,7 @@ private fun TopAppBarAction(
 }
 
 /**
- * EP EDS EP top app bar with search
+ * EP EDS EpTopAppBarWithSearch
  *
  * @param isSearching Defines if the top app bar will be on searching mode
  * @param query Text value which will be used for search.
@@ -430,7 +425,6 @@ private fun TopAppBarAction(
  * @param textFieldId Applies a tag to allow modified element to be found in tests.
  * This is a convenience method for a semantics that sets [SemanticsPropertyReceiver.testTag].
  * @param withBottomDivider Defines if the top app bar will have a bottom divider.
- *
  */
 
 @OptIn(ExperimentalComposeUiApi::class)
@@ -564,7 +558,7 @@ fun EpTopAppBarWithSearch(
 }
 
 /**
- * EP EDS Seach bar
+ * EP EDS SearchBar
  *
  * @param value The []androidx.compose.ui.text.input.TextFieldValue] to be shown in the search bar.
  * @param onValueChane Called when the input service updates the values in the search bar.

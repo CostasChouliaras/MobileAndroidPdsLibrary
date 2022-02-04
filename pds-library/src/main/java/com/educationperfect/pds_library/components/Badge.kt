@@ -25,7 +25,7 @@ enum class EdsBadgeType(val textColor: Color, val backgroundColor: Color, val bo
 }
 
 /**
- * EP EDS Badge composable.
+ * EP EDS EdsBadge
  *
  * @param title the given text will be displayed to the Badge.
  * @param type the given [EdsBadgeType] will be applied to the Badge.

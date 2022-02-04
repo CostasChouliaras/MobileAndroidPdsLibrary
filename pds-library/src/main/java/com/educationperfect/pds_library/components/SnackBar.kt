@@ -35,7 +35,7 @@ enum class EdsSnackBarType(val textColor: Color, val backgroundColor: Color, val
 }
 
 /**
- * EP EDS Snack bar composable.
+ * EP EDS EpSnackBar
  *
  * @param text The text value that will be displayed on Snack bar.
  * @param withIcon defines if the snack bar will include an icon.

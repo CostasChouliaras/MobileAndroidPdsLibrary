@@ -24,7 +24,7 @@ enum class EdsTagType(val textColor: Color, val backgroundColor: Color) {
 }
 
 /**
- * EP EDS tag composable.
+ * EP EDS EdsTag
  *
  * @param title the input text to be shown at the tag.
  * @param type the input text to be shown in the text field.

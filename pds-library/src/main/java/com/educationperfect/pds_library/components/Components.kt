@@ -32,7 +32,7 @@ import org.jetbrains.annotations.NotNull
  */
 
 /**
- * EP EDS EP Icon Action List Item
+ * EP EDS EpIconActionListItem
  *
  * @param label The text to be displayed.
  * @param labelColor Defines the color of the text.
@@ -58,7 +58,6 @@ import org.jetbrains.annotations.NotNull
  * @param subtext The given value will be added as a subtext to the list item.
  * @param onClick The callback to be invoked when this list item is clicked.
  */
-
 @Composable
 fun EpIconActionListItem(
     label: String,
@@ -142,12 +141,11 @@ fun EpIconActionListItem(
 }
 
 /**
- * EP EDS EP Clickable text
+ * EP EDS EpClickableText
  *
  * @param annotatedText The text to be displayed.
  * @param tag The tag of the annotations that is being queried. It's used to distinguish the annotations for different purposes.
  * @param action Defines the action that will occur to the item.
- *
  */
 @Composable
 private fun EpClickableText(
@@ -198,13 +196,12 @@ fun EpErrorScreen() {
 }
 
 /**
- * EP EDS EP bottom bar with action button
+ * EP EDS EpBottomBarWithActionButton
  *
  * @param text The text to be displayed.
  * @param loading Defines if the button will obtain a loading state when it is clicked.
  * @param enabled  Controls the enabled state of the bottom bar. When false, this button will not be clickable.
  * @param action The callback to be invoked when this button is clicked.
- *
  */
 
 @Composable
@@ -229,14 +226,13 @@ fun EpBottomBarWithActionButton(
 }
 
 /**
- * EP EDS EP profile header
+ * EP EDS ProfileHeader
  *
  * @param initials The given 2 character String will be provided as the initials of that composable
  * @param name The text to be displayed as the [name] of the profile header.
  * @param title The text to be displayed as the title of the profile header.
  * @param alpha The fraction of children's alpha value and must be between 0 and 1, inclusive
  * @param spacerHeight Declare the preferred height of the content to be exactly [height] dp.
- *
  */
 
 @Composable

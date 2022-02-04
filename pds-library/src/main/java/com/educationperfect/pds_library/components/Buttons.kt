@@ -16,7 +16,7 @@ import com.educationperfect.pds_library.ui.Neutral700
  */
 
 /**
- * EP EDS activity button.
+ * EP EDS EpActivityButton
  *
  * @param text The text value that will be displayed on the button.
  * @param onCLick The callback to be invoked when this button is clicked.
