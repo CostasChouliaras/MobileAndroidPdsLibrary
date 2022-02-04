@@ -15,6 +15,18 @@ import com.educationperfect.pds_library.ui.Neutral700
  * Created by George Sylaios on 2/6/21.
  */
 
+/**
+ * EP EDS activity button.
+ *
+ * @param text The text value that will be displayed on the button.
+ * @param onCLick The callback to be invoked when this button is clicked.
+ * @param loading Defines if the button will obtain a loading state when it is clicked.
+ * @param enabled Controls the enabled state of the button. When false, this button will not be clickable.
+ * @param colors The given value will be considered as the color of the button.
+ * @param shape Defines the button's shape as well as its shadow.
+ * @param modifier Modifier to be applied to the button.
+ */
+
 @Composable
 fun EpActivityButton(
     text: String,

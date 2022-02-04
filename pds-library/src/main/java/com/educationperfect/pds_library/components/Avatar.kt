@@ -29,6 +29,19 @@ enum class EdsAvatarType(val radius: Dp, val padding: Dp) {
     Basic(12.dp, 11.dp)
 }
 
+/**
+ * EP EDS tag composable.
+ *
+ * @param initials the given 2 character String will be provided as the initials of the Avatar.
+ * @param type the Avatar composable size is depended on the type of the Avatar.
+ * - if [EdsAvatarType.Basic] is set as the Avatar will appear with the default size.
+ * - if [EdsAvatarType.List] is set the Avatar will appear a list item.
+ * @param style the input text to be shown on the initials of the Avatar.
+ * @param backgroundColor the given Color will be applied to the Avatar's background color.
+ * @param width the given value will be considered as the width of the Avatar composable.
+ * @param height the given value will be considered as the height of the Avatar composable.
+ */
+
 @Composable
 fun Avatar(
     initials: String,

@@ -34,6 +34,17 @@ enum class EdsSnackBarType(val textColor: Color, val backgroundColor: Color, val
     Passive(Color.White, Neutral900, Icons.Outlined.Info)
 }
 
+
+/**
+ * EP EDS Snack bar composable.
+ *
+ * @param text The text value that will be displayed on Snack bar.
+ * @param withIcon defines if the snack bar will include an icon.
+ * @param withAction defines if the snack bar will have an action when is tapped.
+ * @param snackBarType the Avatar composable size is depended on the type of the Avatar.
+ * @param onClose action that will be triggered upon tapping close icon.
+ * @param epSnackBarDismissIconTAG Tag / ID which is used to snack bar's dismiss icon (used for tests).
+ */
 @Composable
 fun EpSnackBar(
     text: String,

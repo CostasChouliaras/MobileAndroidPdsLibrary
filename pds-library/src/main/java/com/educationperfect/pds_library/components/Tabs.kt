@@ -18,6 +18,24 @@ import com.educationperfect.pds_library.ui.Neutral700
  * Created by george on 24/08/2021
  */
 
+
+
+/**
+ * EP EDS EpTabRow composable.
+ *
+ * @param items the given list items will be added as tabs.
+ * @param tabIndex the index of the currently selected tab.
+ * @param backgroundColor The background color for the TabRow. Use [Color.Transparent] to have no color.
+ * @param contentColor The preferred content color provided by this TabRow to its children.
+ * Defaults to either the matching content color for [backgroundColor], or if [backgroundColor] is not a color from the theme,
+ * this will keep the same value set above this TabRow.
+ * @param width the given value will be considered as the width of the Row
+ * @param onClick the callback to be invoked when this tab is selected
+ *
+ */
+
+
+
 @Composable
 fun EpTabRow(
     items: List<String>,
@@ -57,6 +75,19 @@ fun EpTabRow(
         }
     }
 }
+
+
+
+
+/**
+ * EP EDS EpTabRow composable.
+ *
+ * @param selected whether this tab is selected or not
+ * @param text the text label displayed in this tab
+ * @param onClick the callback to be invoked when this tab is selected
+ */
+
+
 
 @Composable
 fun EpTabItem(

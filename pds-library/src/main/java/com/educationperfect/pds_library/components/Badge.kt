@@ -24,6 +24,15 @@ enum class EdsBadgeType(val textColor: Color, val backgroundColor: Color, val bo
     Alert(Red500, Red300, Red500)
 }
 
+/**
+ * EP EDS Badge composable.
+ *
+ * @param title the given text will be displayed to the Badge.
+ * @param type the given [EdsBadgeType] will be applied to the Badge.
+- if [EdsBadgeType.Basic] is set as the default type of Eds Badge.
+- if [EdsBadgeType.Alert] is set the Eds Badge component will obtain an alert status and the color will change to red.
+ */
+
 @Composable
 fun EdsBadge(
     title: String,

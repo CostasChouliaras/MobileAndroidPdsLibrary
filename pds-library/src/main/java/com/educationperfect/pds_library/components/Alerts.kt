@@ -14,6 +14,23 @@ import com.educationperfect.pds_library.ui.Neutral1000
  * Created by George Sylaios on 2/6/21.
  */
 
+
+
+/**
+ * EP EDS EP Alert dialog
+ *
+ * @param openDialog Defines if the dialog will open
+ * @param closeDialog Executes when the user tries to dismiss the Dialog by clicking outside or pressing the back button.
+ * This is not called when the dismiss button is clicked.
+ * @param title Text to be displayed as the title of the Dialog.
+ * @param description Text to be displayed as the description of the Dialog
+ * @param textAlign The alignment of the text within the lines of the paragraph. See [TextStyle.textAlign].
+ * @param confirmText Text to be displayed on the confirm choice.
+ * @param confirmAction The callback to be invoked when this confirmationAction is clicked.
+ * @param withDismiss Defines if the dialog will have a dismiss text button.
+ * @param dismissText Text to be displayed upon tapping the dismiss choice.
+ *
+ */
 @Composable
 fun EpAlertDialog(
     openDialog: Boolean,
@@ -80,8 +97,30 @@ fun EpAlertDialog(
     }
 }
 
+
+
+/**
+ * EP EDS EP Custom dialog
+ *
+ * @param openDialog Defines if the dialog will open
+ * @param closeDialog Executes when the user tries to dismiss the Dialog by clicking outside or pressing the back button.
+ * This is not called when the dismiss button is clicked.
+ * @param title Text to be displayed as the title of the Dialog.
+ * @param content Any composable can be inputed here as the content of the dialog.
+ * @param description Text to be displayed as the description of the Dialog
+ * @param textAlign The alignment of the text within the lines of the paragraph. See [TextStyle.textAlign].
+ * @param confirmText Text to be displayed on the confirm choice.
+ * @param confirmAction The callback to be invoked when this confirmationAction is clicked.
+ * @param withDismiss Defines if the dialog will have a dismiss text button.
+ * @param dismissText Text to be displayed upon tapping the dismiss choice.
+ * @param confirmButtonTag Tag / ID which is used to locate dialog's confirmation text button (used for tests).
+ * @param dismissButtonTag Tag / ID which is used to locate dialog's dismiss text button (used for tests).
+ * @param epCustomDialogTag Tag / ID which is used to locate dialog's dismiss icon (used for tests).
+ *
+ */
+
 @Composable
-fun EPCustomDialog(
+private fun EPCustomDialog(
     openDialog: Boolean,
     closeDialog: () -> Unit,
     title: String,

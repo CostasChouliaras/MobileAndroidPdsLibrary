@@ -23,6 +23,15 @@ enum class EdsTagType(val textColor: Color, val backgroundColor: Color) {
     Alert(Red500, Red300)
 }
 
+
+/**
+ * EP EDS tag composable.
+ *
+ * @param title the input text to be shown at the tag.
+ * @param type the input text to be shown in the text field.
+ * - if [EdsTagType.Basic] is set as the default type of EdsTag.
+ * - if [EdsTagType.Alert] is set the EdsTag component will obtain an alert status and the color will change to red.
+ */
 @Composable
 fun EdsTag(
     title: String,

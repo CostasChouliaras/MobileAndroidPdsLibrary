@@ -31,6 +31,33 @@ import org.jetbrains.annotations.NotNull
  * Created by george on 22/06/2021
  */
 
+/**
+ * EP EDS EP Icon Action List Item
+ *
+ * @param label The text to be displayed.
+ * @param labelColor Defines the color of the text.
+ * @param labelStyle Style configuration for the text such as color, font, line height etc.
+ * @param icon the given icon will be displayed at the beginning of the list item.
+ * @param iconTint Tint to be applied to the icon. If [Color.Unspecified] is provided, then no tint is applied
+ * @param iconSize the given value will be considered as the size of the icon.
+ * @param iconContentDescription Text used by accessibility services to describe what this icon represents.
+ * This should always be provided unless this icon is used for decorative purposes, and does not represent a meaningful action
+ * that a user can take. This text should be localized, such as by using [androidx.compose.ui.res.stringResource] or similar.
+ * @param withTopDivider Defines if the list item will include a top [Divider].
+ * @param topDividerPadding Defines if the list item will include top [Divider] [padding].
+ * @param withBottomDivider Defines if the list item will include a bottom [Divider].
+ * @param bottomDividerPadding Defines if the list item will include bottom [Divider] [padding].
+ * @param dividerThickness Defines the thickness of the [Divider].
+ * @param horizontalPadding Apply horizontal dp space along the left and right edges of the content,
+ * and vertical dp space along the top and bottom edges. [Padding] is applied before content measurement and takes precedence;
+ * content may only be as large as the remaining space. Negative padding is not permitted — it will cause [IllegalArgumentException]. See [Modifier.offset].
+ * @param verticalPadding Apply vertical dp space along the left and right edges of the content,
+ * and vertical dp space along the top and bottom edges. Padding is applied before content measurement and takes precedence;
+ * content may only be as large as the remaining space. Negative padding is not permitted — it will cause IllegalArgumentException. See Modifier.offset.
+ * @param withNavigationIcon Defines if the list item will include a navigation icon.
+ * @param subtext The given value will be added as a subtext to the list item.
+ * @param onClick The callback to be invoked when this list item is clicked.
+ */
 
 @Composable
 fun EpIconActionListItem(
@@ -114,8 +141,17 @@ fun EpIconActionListItem(
     }
 }
 
+
+/**
+ * EP EDS EP Clickable text
+ *
+ * @param annotatedText The text to be displayed.
+ * @param tag The tag of the annotations that is being queried. It's used to distinguish the annotations for different purposes.
+ * @param action Defines the action that will occur to the item.
+ *
+ */
 @Composable
-fun EpClickableText(
+private fun EpClickableText(
     annotatedText: AnnotatedString,
     tag: String,
     action: (String) -> Unit
@@ -129,7 +165,7 @@ fun EpClickableText(
 }
 
 @Composable
-fun <T>ContentWithModelError(
+private fun <T>ContentWithModelError(
     model: T?,
     content: @Composable (T) -> Unit
 ) {
@@ -138,6 +174,7 @@ fun <T>ContentWithModelError(
         else -> EpErrorScreen()
     }
 }
+
 
 @Composable
 fun EpErrorScreen() {
@@ -161,6 +198,16 @@ fun EpErrorScreen() {
     }
 }
 
+/**
+ * EP EDS EP bottom bar with action button
+ *
+ * @param text The text to be displayed.
+ * @param loading Defines if the button will obtain a loading state when it is clicked.
+ * @param enabled  Controls the enabled state of the bottom bar. When false, this button will not be clickable.
+ * @param action The callback to be invoked when this button is clicked.
+ *
+ */
+
 @Composable
 fun EpBottomBarWithActionButton(
     text: String,
@@ -181,6 +228,18 @@ fun EpBottomBarWithActionButton(
         )
     }
 }
+
+
+/**
+ * EP EDS EP profile header
+ *
+ * @param initials The given 2 character String will be provided as the initials of that composable
+ * @param name The text to be displayed as the [name] of the profile header.
+ * @param title The text to be displayed as the title of the profile header.
+ * @param alpha The fraction of children's alpha value and must be between 0 and 1, inclusive
+ * @param spacerHeight Declare the preferred height of the content to be exactly [height] dp.
+ *
+ */
 
 @Composable
 fun ProfileHeader(
