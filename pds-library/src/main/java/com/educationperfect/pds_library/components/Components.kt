@@ -140,38 +140,6 @@ fun EpIconActionListItem(
     }
 }
 
-/**
- * EP EDS EpClickableText
- *
- * @param annotatedText The text to be displayed.
- * @param tag The tag of the annotations that is being queried. It's used to distinguish the annotations for different purposes.
- * @param action Defines the action that will occur to the item.
- */
-@Composable
-private fun EpClickableText(
-    annotatedText: AnnotatedString,
-    tag: String,
-    action: (String) -> Unit
-) {
-    ClickableText(text = annotatedText) { offset ->
-        annotatedText.getStringAnnotations(tag = tag, start = offset, end = offset)
-            .firstOrNull()?.let { annotation ->
-                action(annotation.item)
-            }
-    }
-}
-
-@Composable
-private fun <T>ContentWithModelError(
-    model: T?,
-    content: @Composable (T) -> Unit
-) {
-    when (model) {
-        is NotNull -> content(model)
-        else -> EpErrorScreen()
-    }
-}
-
 
 @Composable
 fun EpErrorScreen() {
@@ -226,7 +194,7 @@ fun EpBottomBarWithActionButton(
 }
 
 /**
- * EP EDS ProfileHeader
+ * EP EDS ProfileHeader. A [Avatar] EP EDS custom composable which is followed by text information.
  *
  * @param initials The given 2 character String will be provided as the initials of that composable
  * @param name The text to be displayed as the [name] of the profile header.

@@ -35,7 +35,10 @@ enum class EdsSnackBarType(val textColor: Color, val backgroundColor: Color, val
 }
 
 /**
- * EP EDS EpSnackBar
+ * EP EDS EpSnackBar. Custom EP snack bar. Snack bars provide brief messages about app processes at the bottom of the screen.
+ * Snack bars inform users of a process that an app has performed or will perform. They appear temporarily, towards the bottom of the screen.
+ * They shouldn’t interrupt the user experience, and they don’t require user input to disappear.
+ * Snack bar can contain a single action. Because Snack bar disappears automatically, the action shouldn't be "Dismiss" or "Cancel".
  *
  * @param text The text value that will be displayed on Snack bar.
  * @param withIcon defines if the snack bar will include an icon.

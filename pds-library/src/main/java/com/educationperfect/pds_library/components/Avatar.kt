@@ -30,7 +30,7 @@ enum class EdsAvatarType(val radius: Dp, val padding: Dp) {
 }
 
 /**
- * EP EDS Avatar
+ * EP EDS Avatar. Icon which contains the 2 given characters as the initials of the Avatar.
  *
  * @param initials the given 2 character String will be provided as the initials of the Avatar.
  * @param type the Avatar composable size is depended on the type of the Avatar.

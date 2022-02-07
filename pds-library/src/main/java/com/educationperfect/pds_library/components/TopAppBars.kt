@@ -169,7 +169,10 @@ private fun TopAppBarTitle(
 }
 
 /**
- * EP EDS EpTopAppBar
+ * EP EDS EpTopAppBar. A bar which has many different elements such as title, subtitle and a set of icons that include navigation actions.
+ * The top app bar displays information and actions relating to the current screen.
+ * This TopAppBar has slots for a title, navigation icon, and actions. Note that the title slot is inset from the start according to spec
+ * - for custom use cases such as horizontally centering the title, use the other TopAppBar overload for a generic TopAppBar with no restriction on content.
  *
  * @param title The input text will be shown in the [title] of top the app bar.
  * @param titleColor The given color value will be set as the color for the [title] of the top app bar.
@@ -403,7 +406,10 @@ private fun TopAppBarAction(
 }
 
 /**
- * EP EDS EpTopAppBarWithSearch
+ * EP EDS EpTopAppBarWithSearch. The top app bar displays information and actions relating to the current screen.
+ * This TopAppBar has slots for a title, navigation icon, and actions. Note that the title slot is inset from
+ * the start according to spec - for custom use cases such as horizontally centering the [title],
+ * use the other TopAppBar overload for a generic TopAppBar with no restriction on content.
  *
  * @param isSearching Defines if the top app bar will be on searching mode
  * @param query Text value which will be used for search.

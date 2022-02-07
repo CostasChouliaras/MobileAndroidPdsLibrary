@@ -15,7 +15,7 @@ import com.educationperfect.pds_library.ui.Neutral1000
  */
 
 /**
- * EP EDS EpAlertDialog
+ * EP EDS EpAlertDialog. A custom [AlertDialog] which has one confirmation action and a cancel action.
  *
  * @param openDialog Defines if the dialog will open
  * @param closeDialog Executes when the user tries to dismiss the Dialog by clicking outside or pressing the back button.

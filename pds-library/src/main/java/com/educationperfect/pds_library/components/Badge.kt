@@ -25,7 +25,7 @@ enum class EdsBadgeType(val textColor: Color, val backgroundColor: Color, val bo
 }
 
 /**
- * EP EDS EdsBadge
+ * EP EDS EdsBadge. A badge which can display the given information in a specific way ([EdsBadgeType.Basic] or [EdsBadgeType.Alert])
  *
  * @param title the given text will be displayed to the Badge.
  * @param type the given [EdsBadgeType] will be applied to the Badge.

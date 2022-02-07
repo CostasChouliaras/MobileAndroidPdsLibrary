@@ -24,7 +24,8 @@ enum class EdsTagType(val textColor: Color, val backgroundColor: Color) {
 }
 
 /**
- * EP EDS EdsTag
+ * EP EDS EdsTag. A custom tag which can display additional information next to any composable.
+ * This tag can be displayed as an info or an alert depending on which [EdsTagType] is used.
  *
  * @param title the input text to be shown at the tag.
  * @param type the input text to be shown in the text field.

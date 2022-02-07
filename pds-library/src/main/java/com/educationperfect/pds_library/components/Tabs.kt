@@ -72,7 +72,8 @@ fun EpTabRow(
 }
 
 /**
- * EP EDS EpTabItem
+ * EP EDS EpTabItem. Custom tab item. Tabs organize content across different screens, data sets, and other interactions.
+ * Tab represents a single page of content using a text label.
  *
  * @param selected whether this tab is selected or not
  * @param text the text label displayed in this tab

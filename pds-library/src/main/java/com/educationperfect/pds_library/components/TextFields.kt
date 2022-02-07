@@ -31,7 +31,7 @@ import com.educationperfect.pds_library.ui.Red500
  */
 
 /**
- * EP EDS OutlinedTextFieldWithFixedLabel
+ * EP EDS OutlinedTextFieldWithFixedLabel. A custom input outlined text field which can also include many additional attributes, elements and/or composables.
  *
  * Outlined text fields have less visual emphasis than filled text fields. When they appear in places like forms,
  * where many text fields are placed together, their reduced emphasis helps simplify the layout.
@@ -166,7 +166,7 @@ fun OutlinedTextFieldWithFixedLabel(
 }
 
 /**
- * EP EDS PlainTextFieldWithFixedLabel
+ * EP EDS PlainTextFieldWithFixedLabel. A custom input text field which can also include many additional attributes, elements and/or composables.
  *
  * @param value the input text to be shown in the text field.
  * @param onTextChanged the callback that is triggered when the input service updates the text. An updated text comes as a parameter of the callback.
