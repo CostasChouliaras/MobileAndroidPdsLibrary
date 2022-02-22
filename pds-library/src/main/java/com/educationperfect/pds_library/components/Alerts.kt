@@ -114,7 +114,7 @@ fun EpAlertDialog(
  * @param epCustomDialogTag Tag / ID which is used to locate dialog's dismiss icon (used for tests).
  */
 @Composable
-private fun EPCustomDialog(
+fun EPCustomDialog(
     openDialog: Boolean,
     closeDialog: () -> Unit,
     title: String,
