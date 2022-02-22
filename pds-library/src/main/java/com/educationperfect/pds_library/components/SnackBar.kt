@@ -1,9 +1,6 @@
 package com.educationperfect.pds_library.components
 
-import androidx.compose.foundation.layout.Arrangement
-import androidx.compose.foundation.layout.Row
-import androidx.compose.foundation.layout.fillMaxWidth
-import androidx.compose.foundation.layout.padding
+import androidx.compose.foundation.layout.*
 import androidx.compose.material.*
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.outlined.Info
@@ -47,6 +44,7 @@ enum class EdsSnackBarType(val textColor: Color, val backgroundColor: Color, val
  * @param onClose action that will be triggered upon tapping close icon.
  * @param epSnackBarDismissIconTAG Tag / ID which is used to snack bar's dismiss icon (used for tests).
  */
+
 @Composable
 fun EpSnackBar(
     text: String,
@@ -73,7 +71,10 @@ fun EpSnackBar(
         }
     ) {
         Row(
-            modifier = Modifier.fillMaxWidth(),
+            modifier = Modifier
+                .fillMaxWidth()
+                .height(IntrinsicSize.Min)
+                .padding(horizontal = 12.dp, vertical = 12.dp),
             horizontalArrangement = Arrangement.Start,
             verticalAlignment = Alignment.CenterVertically
         ) {
