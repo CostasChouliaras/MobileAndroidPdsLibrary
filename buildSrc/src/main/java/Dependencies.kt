@@ -5,16 +5,20 @@ object Versions {
 }
 
 object Libs {
-    const val androidGradlePlugin = "com.android.tools.build:gradle:7.2.0-alpha06"
+    const val androidGradlePlugin = "com.android.tools.build:gradle:7.3.0-alpha03"
     const val jdkDesugar = "com.android.tools:desugar_jdk_libs:1.0.9"
-
     const val junit = "junit:junit:4.13"
 
     object Kotlin {
-        const val version = "1.5.31"
+        const val version = "1.6.10"
         const val stdlib = "org.jetbrains.kotlin:kotlin-stdlib-jdk8:$version"
         const val gradlePlugin = "org.jetbrains.kotlin:kotlin-gradle-plugin:$version"
         const val extensions = "org.jetbrains.kotlin:kotlin-android-extensions:$version"
+    }
+
+    object Google {
+        const val gmsClasspath = "com.google.gms:google-services:4.3.10"
+        const val analytics = "com.google.firebase:firebase-analytics-ktx"
     }
 
     object Coroutines {
@@ -39,15 +43,15 @@ object Libs {
 
     object AndroidX {
         const val appcompat = "androidx.appcompat:appcompat:1.3.0"
-        const val coreKtx = "androidx.core:core-ktx:1.5.0"
+        const val coreKtx = "androidx.core:core-ktx:1.7.0"
 
         object Compose {
             private const val snapshot = ""
-            const val version = "1.0.5"
-            private const val navVersion = "2.4.0-rc01"
+            const val version = "1.1.0"
+            private const val navVersion = "2.5.0-alpha01"
             private const val hiltVersion = "1.0.0"
-            private const val viewmodelVersion = "2.4.0"
-            private const val navHiltVersion = "1.0.0-alpha03"
+            private const val viewmodelVersion = "1.0.0-alpha07"
+            private const val navHiltVersion = "1.0.0"
 
             @get:JvmStatic
             val snapshotUrl: String
@@ -68,12 +72,6 @@ object Libs {
             const val hilt = "androidx.hilt:hilt-*:$hiltVersion"
             const val test = "androidx.compose.test:test-core:$version"
             const val uiTest = "androidx.compose.ui:ui-test:$version"
-        }
-
-        object Navigation {
-            private const val version = "2.4.0-alpha09"
-            const val fragment = "androidx.navigation:navigation-fragment-ktx:$version"
-            const val uiKtx = "androidx.navigation:navigation-ui-ktx:$version"
         }
 
         object Datastore {
@@ -118,7 +116,7 @@ object Libs {
         }
 
         object Room {
-            private const val version = "2.3.0"
+            private const val version = "2.4.0"
             const val roomCompiler = "androidx.room:room-compiler:$version"
             const val roomRuntime = "androidx.room:room-runtime:$version"
             const val roomKtx = "androidx.room:room-ktx:$version"
@@ -128,10 +126,15 @@ object Libs {
             private const val version = "4.7.1"
             const val timber = "com.jakewharton.timber:timber:$version"
         }
+
+        object InAppUpdateCompose {
+            private const val version = "0.0.14"
+            const val appUpdate = "se.warting.in-app-update:in-app-update-compose:$version"
+        }
     }
 
     object Accompanist {
-        const val version = "0.20.0"
+        const val version = "0.20.3"
         const val insets = "com.google.accompanist:accompanist-insets:$version"
         const val uicontroller = "com.google.accompanist:accompanist-systemuicontroller:$version"
     }

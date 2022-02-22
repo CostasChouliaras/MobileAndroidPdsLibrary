@@ -71,7 +71,7 @@ dependencies {
 
     kapt Libs.AndroidX.Room.roomCompiler
     kapt Libs.Hilt.hiltKapt
-    kapt "org.xerial:sqlite-jdbc:3.34.0"
+    kapt "org.xerial:sqlite-jdbc:3.36.0"
 
     implementation Libs.Kotlin.stdlib
     implementation Libs.Coroutines.android
