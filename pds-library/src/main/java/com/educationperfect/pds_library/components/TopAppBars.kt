@@ -453,16 +453,17 @@ fun EpTopAppBarWithSearch(
     elevation: Dp = 2.dp,
     backgroundColor: Color = Color.White,
     textFieldId: String = "",
-    withBottomDivider: Boolean = true
+    withBottomDivider: Boolean = true,
+    resetStateWhenNotSearching: Boolean = false
 ) {
     val keyboardController = LocalSoftwareKeyboardController.current
     val focusRequester = FocusRequester()
     var textFieldValueState by remember {
         mutableStateOf(
             TextFieldValue(
-            text = query,
-            selection = TextRange(query.length)
-        )
+                text = query,
+                selection = TextRange(query.length)
+            )
         )
     }
     val titleWidth = 260.dp
@@ -485,11 +486,18 @@ fun EpTopAppBarWithSearch(
         else -> ActionState.Visible
     }
 
-    LaunchedEffect(Unit) {
+    LaunchedEffect(isSearching) {
         if (isSearching) {
             keyboardController?.show()
             focusRequester.requestFocus()
         }
+    }
+
+    if (resetStateWhenNotSearching && !isSearching) {
+        textFieldValueState = TextFieldValue(
+            text = "",
+            selection = TextRange(query.length)
+        )
     }
 
     Column(Modifier.fillMaxWidth()) {
