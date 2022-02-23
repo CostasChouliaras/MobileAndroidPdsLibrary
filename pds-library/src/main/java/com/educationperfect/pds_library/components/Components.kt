@@ -205,6 +205,7 @@ fun ProfileHeader(
     initials: String,
     name: String,
     title: String,
+    isOnline: Boolean,
     alpha: Float,
     spacerHeight: Dp = 48.dp
 ) {
@@ -212,13 +213,13 @@ fun ProfileHeader(
         Modifier
             .fillMaxWidth()
             .background(Color.White)
-            .alpha(alpha)
-            .testTag("teacherInfo"),
+            .testTag("teacherInfo")
+            .alpha(alpha),
         horizontalAlignment = Alignment.CenterHorizontally
     ) {
         Spacer(Modifier.height(spacerHeight))
 
-        Avatar(initials = initials, width = 56.dp, height = 56.dp)
+        Avatar(initials = initials, isOnline = isOnline, width = 56.dp, height = 56.dp)
 
         Spacer(Modifier.height(8.dp))
 
