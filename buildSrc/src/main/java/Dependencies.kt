@@ -17,12 +17,16 @@ object Libs {
     }
 
     object Google {
+        const val version = "1.10.3"
+        const val ktxVersion = "1.8.1"
         const val gmsClasspath = "com.google.gms:google-services:4.3.10"
         const val analytics = "com.google.firebase:firebase-analytics-ktx"
+        const val playCore = "com.google.android.play:core:$version"
+        const val coreKtx = "com.google.android.play:core-ktx:$ktxVersion"
     }
 
     object Coroutines {
-        private const val version = "1.5.2"
+        private const val version = "1.6.0"
         const val core = "org.jetbrains.kotlinx:kotlinx-coroutines-core:$version"
         const val android = "org.jetbrains.kotlinx:kotlinx-coroutines-android:$version"
         const val test = "org.jetbrains.kotlinx:kotlinx-coroutines-test:$version"
@@ -125,11 +129,6 @@ object Libs {
         object Timber {
             private const val version = "4.7.1"
             const val timber = "com.jakewharton.timber:timber:$version"
-        }
-
-        object InAppUpdateCompose {
-            private const val version = "0.0.14"
-            const val appUpdate = "se.warting.in-app-update:in-app-update-compose:$version"
         }
     }
 

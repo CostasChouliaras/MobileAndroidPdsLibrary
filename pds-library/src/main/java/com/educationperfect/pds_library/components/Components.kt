@@ -13,6 +13,7 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.alpha
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.graphics.painter.Painter
+import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.platform.testTag
 import androidx.compose.ui.res.colorResource
 import androidx.compose.ui.res.painterResource
@@ -23,6 +24,10 @@ import androidx.compose.ui.unit.*
 import com.educationperfect.pds_library.R
 import com.educationperfect.pds_library.ui.Neutral300
 import com.educationperfect.pds_library.ui.Neutral400
+import com.educationperfect.pds_library.inAppReview.rememberInAppReviewState
+import kotlinx.coroutines.launch
+import org.jetbrains.annotations.NotNull
+
 
 /**
  * Created by george on 22/06/2021
@@ -246,5 +251,78 @@ fun ProfileHeader(
         )
 
         Spacer(Modifier.height(spacerHeight))
+    }
+}
+
+@Composable
+fun InAppUpdateContainer(
+    shouldDisplayDialog: Boolean = false,
+    setLastSeenInAppUpdate: () -> Unit,
+    content: @Composable () -> Unit
+) {
+    Column {
+        content()
+
+        if (shouldDisplayDialog) {
+            val scope = rememberCoroutineScope()
+            val updateState = rememberInAppUpdateState()
+            val context = LocalContext.current
+            var openDialog by remember { mutableStateOf(false) }
+            val closeDialog = {
+                openDialog = false
+                setLastSeenInAppUpdate()
+            }
+            val onUpdate: () -> Unit = {
+                val activity = context.findActivity()
+                if (activity != null && updateState.appUpdateResult is AppUpdateResult.Available) {
+                    (updateState.appUpdateResult as
+                            AppUpdateResult.Available).startImmediateUpdate(activity, APP_UPDATE_REQUEST_CODE)
+                }
+            }
+
+            LaunchedEffect(updateState.appUpdateResult) {
+                openDialog = updateState.appUpdateResult is AppUpdateResult.Available && shouldDisplayDialog
+                if (updateState.appUpdateResult is AppUpdateResult.Downloaded) {
+                    scope.launch {
+                        (updateState.appUpdateResult as AppUpdateResult.Downloaded).completeUpdate()
+                    }
+                }
+            }
+
+            EpAlertDialog(
+                openDialog = openDialog,
+                closeDialog = closeDialog,
+                title = stringResource(R.string.in_app_update_title),
+                description = stringResource(R.string.in_app_update_description),
+                confirmText = stringResource(R.string.in_app_update_button_positive),
+                confirmAction = onUpdate,
+                dismissText = stringResource(R.string.cancel)
+            )
+        }
+    }
+}
+
+@Composable
+fun InAppReviewContainer(
+    checkForReview: Boolean = false,
+    content: @Composable () -> Unit
+) {
+    Column {
+        content()
+
+        if (checkForReview) {
+            val state = rememberInAppReviewState()
+            val context = LocalContext.current
+            val reviewInfo = state.reviewState.appReviewResult
+            if (reviewInfo != null) {
+                val activity = context.findActivity()
+                if (activity != null) {
+                    val flow = state.manager.launchReviewFlow(activity, reviewInfo)
+                    flow.addOnCompleteListener { _ ->
+//                        add if something required after review is complete
+                    }
+                }
+            }
+        }
     }
 }
