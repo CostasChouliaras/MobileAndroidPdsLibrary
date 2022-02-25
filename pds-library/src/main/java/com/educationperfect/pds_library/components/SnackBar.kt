@@ -74,7 +74,7 @@ fun EpSnackBar(
             modifier = Modifier
                 .fillMaxWidth()
                 .height(IntrinsicSize.Min)
-                .padding(horizontal = 12.dp, vertical = 12.dp),
+                .padding(horizontal = 6.dp, vertical = 12.dp),
             horizontalArrangement = Arrangement.Start,
             verticalAlignment = Alignment.CenterVertically
         ) {
