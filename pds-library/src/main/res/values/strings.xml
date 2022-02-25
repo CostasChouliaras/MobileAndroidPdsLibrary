@@ -1,4 +1,5 @@
 <resources>
+    //Those Strings are only included in some of the components.
     <string name="in_app_update_title">Update your app</string>
     <string name="in_app_update_description">Get the latest features &amp; improvements</string>
     <string name="in_app_update_button_positive">Update</string>
