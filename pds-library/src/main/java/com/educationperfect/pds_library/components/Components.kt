@@ -1,5 +1,8 @@
 package com.educationperfect.pds_library.components
 
+import android.content.Context
+import android.content.ContextWrapper
+import androidx.appcompat.app.AppCompatActivity
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.background
 import androidx.compose.foundation.clickable
@@ -25,9 +28,11 @@ import com.educationperfect.pds_library.R
 import com.educationperfect.pds_library.ui.Neutral300
 import com.educationperfect.pds_library.ui.Neutral400
 import com.educationperfect.pds_library.inAppReview.rememberInAppReviewState
+import com.educationperfect.pds_library.inAppUpdate.rememberInAppUpdateState
+import com.google.android.play.core.ktx.AppUpdateResult
 import kotlinx.coroutines.launch
-import org.jetbrains.annotations.NotNull
 
+private const val APP_UPDATE_REQUEST_CODE = 86500
 
 /**
  * Created by george on 22/06/2021
@@ -325,4 +330,10 @@ fun InAppReviewContainer(
             }
         }
     }
+}
+
+fun Context.findActivity(): AppCompatActivity? = when (this) {
+    is AppCompatActivity -> this
+    is ContextWrapper -> baseContext.findActivity()
+    else -> null
 }
